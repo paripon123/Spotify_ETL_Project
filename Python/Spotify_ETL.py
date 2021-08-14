@@ -12,7 +12,7 @@ from pprint import pprint
 def spotify_ETL_func():
     client_id = '' # Generate on spotify development
     client_secret = '' # Generate on spotify development
-    redirect_url = 'http://localhost:7777/callback'
+    redirect_url = '' # Pick You Local Host
 
     sp = spotipy.Spotify(auth_manager = SpotifyOAuth(client_id = client_id,
                                                     client_secret = client_secret,
