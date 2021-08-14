@@ -8,7 +8,7 @@ from datetime import datetime, timedelta
 
 def weekly_email():
     # connect to postgres
-    conn = psycopg2.connect(host = 'localhost', port = '5432', dbname ='spotify',user = 'pariponthanthong')
+    conn = psycopg2.connect(host = '', port = '', dbname ='spotify',user = '') 
     cur = conn.cursor()
     today = datetime.today().date()
     six_day_ago = today - timedelta(days = 6)
@@ -58,11 +58,11 @@ def weekly_email():
     # Sending Email
     ###
 
-    port = 465
-    password = "popersers12"
+    port = 
+    password = ""
 
-    sender_email = "testparipon@gmail.com"
-    receiver_email = "paripon.thanthong@gmail.com"
+    sender_email = ""
+    receiver_email = ""
     
     message = MIMEMultipart("alternative")
     message["Subject"] = f"Spotify Weekly Roundup - {today}"
