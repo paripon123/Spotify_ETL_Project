@@ -10,8 +10,8 @@ import sys
 from pprint import pprint
 
 def spotify_ETL_func():
-    client_id = '05b8ffdcee4d49b89aa25c08304374b2'
-    client_secret = '5009dc90eaf54ed1a874dcd23896bbff'
+    client_id = '' # Generate on spotify development
+    client_secret = '' # Generate on spotify development
     redirect_url = 'http://localhost:7777/callback'
 
     sp = spotipy.Spotify(auth_manager = SpotifyOAuth(client_id = client_id,
@@ -143,9 +143,10 @@ def spotify_ETL_func():
     fact_df['loudness'] = feature_df[['loudness']]
     fact_df['genre'] = artist_df[['genre']]
 
-    conn = psycopg2.connect(host = 'localhost', port = '5432', dbname ='spotify')
+    # 
+    conn = psycopg2.connect(host = '', port = '', dbname ='spotify') # Chose you port , host
     cur = conn.cursor()
-    engine = create_engine('postgresql+psycopg2://pariponthanthong@localhost/spotify')
+    engine = create_engine('postgresql+psycopg2://""/spotify') # Need to include username+password > Lookup sqlAlchemy doc
     conn_eng = engine.raw_connection()
     cur_eng = conn_eng.cursor()
 
