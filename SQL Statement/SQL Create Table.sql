@@ -36,16 +36,6 @@ CREATE TABLE IF NOT EXISTS spotify_schemas.artist(
 	genre TEXT
 );
 	
-
-
-
-
-
-
-
-
-
-
 -- Creating Feature Table
 
 CREATE TABLE IF NOT EXISTS spotify_schemas.feature(
